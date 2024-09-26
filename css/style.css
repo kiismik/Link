@@ -1,0 +1,271 @@
+@import url('reset.css');
+
+@font-face {
+	font-family: 'Roboto';
+	src: url('../fonts/Roboto-Regular.woff2') format('woff2'),
+		url('../fonts/Roboto-Regular.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Roboto';
+	src: url('../fonts/Roboto-Medium.woff2') format('woff2'),
+		url('../fonts/Roboto-Medium.woff') format('woff');
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Roboto';
+	src: url('../fonts/Roboto-Bold.woff2') format('woff2'),
+		url('../fonts/Roboto-Bold.woff') format('woff');
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Roboto';
+	src: url('../fonts/Roboto-Black.woff2') format('woff2'),
+		url('../fonts/Roboto-Black.woff') format('woff');
+	font-weight: 900;
+	font-style: normal;
+	font-display: swap;
+}
+
+body {
+	font-family: "Roboto";
+	color: #212121;
+	font-weight: 400;
+	font-size: 14px;
+}
+body {
+	font-family: "Roboto";
+	color: white;
+	font-weight: 400;
+	font-size: 14px;
+}
+
+
+.hero{
+	background: url('../img/bground.jpg') no-repeat 50% / cover;
+	width: 100%;
+	height: 800px;
+	display: flex; 
+	text-align: center; 
+	align-items: center; 
+	justify-content: center; 
+	position: relative; 
+	
+}
+.blur{
+	position: absolute;
+	height: 100%;
+	width: 496px;
+	background: rgba(233, 233, 233, 0.25);
+	right: 0;
+	
+
+}
+.elements{
+	z-index: 1;
+	width: 340px;
+	margin: 0 auto;
+	
+}
+.switch {
+	margin-top: 60px;
+}
+
+.switch input {
+	position: absolute;
+	z-index: -1;
+	width: 0;
+	height: 0;
+	opacity: 0;
+}
+
+.switch label {
+	display: flex;
+	width: 100%;
+	height: 36px;
+	border: 1px solid #171534;
+	border-radius: 100px;
+	position: relative;
+	cursor: pointer;
+}
+
+.switch label::before {
+	content: '';
+	position: absolute;
+	top: 2px;
+	bottom: 2px;
+	left: 2px;
+	width: 168px;
+	height: 32px;
+	background: #171534;
+	border-radius: 30px;
+	transition: all .3s linear;
+}
+.switch input:checked+label::before {
+	left: calc(100% - 2px);
+	transform: translateX(-100%);
+}
+.switch label span {
+	color: white;
+	font-size: 12px;
+	flex: 1 1 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+
+/*BASE*/
+
+.title{
+	color: white;
+	font-size: 30px;
+	margin: 75px auto 15px;
+
+}
+.base input{
+	margin-top: 15px;
+	width: 100%;
+	height: 44px;
+	z-index: 1;
+	border-radius: 30px;
+	font-size: 12px;
+	color: #fff;
+	border: none;
+	padding: 10px;
+
+}
+.base input::placeholder {
+    color: #929191;
+	z-index: 2;
+}
+/*checkbox*/
+.checkbox{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 20px;
+	font-size: 12px;
+}
+.checkbox a {
+	color: #171534;
+	text-decoration: none;
+	padding-left: 10px;
+}
+.remember{
+	display: flex;
+	align-items: center;
+}
+.checkbox input {
+	position: absolute;
+	z-index: -1;
+	width: 0;
+	height: 0;
+	opacity: 0;
+}
+
+.checkbox label {
+	display: inline-block;
+	padding: 5px 5px 5px 30px;
+	position: relative;
+	cursor: pointer;
+}
+
+.checkbox label::before {
+	content: '';
+	position: absolute;
+	top: 3px;
+	left: 0;
+	width: 15px;
+	height: 15px;
+	border: 1px solid white;
+}
+
+.checkbox input:checked+label::before {
+	background: #171534;
+}
+
+.checkbox input:checked+label::after {
+	content: '';
+	position: absolute;
+	top: 4px;
+	left: 6px;
+	width: 6px;
+	height: 12px;
+	border-bottom: 2px solid #fff;
+	border-right: 2px solid #fff;
+	transform: rotate(38deg);
+}
+/*Button*/
+.button button {
+	margin-top: 30px;
+    width: 100%;
+    height: 44px;
+    background-color: #171534;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.button button:hover {
+    background-color: #423eaf; 
+
+}
+/*links*/
+.links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    font-size: 12px;
+}
+
+.links a {
+    color: #171534; 
+    text-decoration: none;
+    padding: 5px;
+    transition: color 0.3s ease;
+}
+
+.links a:hover {
+    color: #423eaf; 
+}
+.link{
+	margin-top: 30px;
+}
+.link a{
+	
+	text-decoration: none;
+	color: #171534; 
+}
+
+/*social*/
+.social{
+	display: flex;
+	justify-content: center;
+	margin-top: 20px;
+}
+
+
+.social svg {
+    width: 24px;
+    height: 24px;
+    fill: #171534; 
+    transition: fill 0.3s ease;
+}
+
+.social a:hover svg {
+    fill: #423eaf; 
+}
